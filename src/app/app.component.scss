@@ -1,0 +1,42 @@
+/* วงแสงตามเมาส์ */
+.mouse-light {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient( rgba(61, 39, 255, 0.25) 20%,transparent 70%);
+  transition: transform 0.07s;
+  animation: colorShift 20s linear infinite;
+  animation: hueRotate 20s linear infinite;
+}
+
+@keyframes colorShift {
+  0% {
+    background: radial-gradient(circle, rgba(255, 0, 150, 0.3) 20%, transparent 70%);
+  }
+  25% {
+    background: radial-gradient(circle, rgba(0, 150, 255, 0.3) 20%, transparent 70%);
+  }
+  50% {
+    background: radial-gradient(circle, rgba(0, 255, 180, 0.3) 20%, transparent 70%);
+  }
+  75% {
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.3) 20%, transparent 70%);
+  }
+  100% {
+    background: radial-gradient(circle, rgba(255, 0, 150, 0.3) 20%, transparent 70%);
+  }
+}
+
+@keyframes hueRotate {
+  from {
+    filter:hue-rotate(0deg);
+  }
+  to {
+    filter:hue-rotate(360deg);
+  }
+}
+

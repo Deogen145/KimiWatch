@@ -1,1 +1,19 @@
-<p>main works!</p>
+<div class="card">
+    <h1>TopAnime</h1>
+    <div class="scroll-wrapper">
+        <div class="topAnime">
+            <div class="image-container action-hover" *ngFor="let anime of animes | slice:0:10">
+                <div class="overlay-text">
+                    {{anime.title}}
+                </div>
+                <img src="{{anime.images.jpg.large_image_url}}" alt="{{anime.title}}">
+            </div>
+            <div class="image-container action-hover" *ngFor="let anime of animes | slice:0:10">
+                <div class="overlay-text">
+                    {{anime.title}}
+                </div>
+                <img src="{{anime.images.jpg.large_image_url}}" alt="{{anime.title}}">
+            </div>
+        </div>
+    </div>
+</div>
